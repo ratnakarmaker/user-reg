@@ -1,0 +1,41 @@
+.nav_menu {
+    font-size: 20px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+
+.user {
+    color: #f9cc5a !important;
+}
+
+.error_message {
+    color: red;
+}
+
+.user_icon {
+    color: rgb(255, 0, 149);
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.footer a {
+    text-transform: uppercase;
+    color: indigo;
+}
+
+.footer {
+    background: transparent;
+    border: none;
+}
+
+.btn_disable {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor:not-allowed !important;
+}
+
+.btn_enable {
+    padding: 10px 20px;
+    font-size: 18px;
+}
