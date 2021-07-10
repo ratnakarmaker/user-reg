@@ -15,8 +15,12 @@ const Registration = () => {
   const [disable, setDisable] = useState(true);
 
   const handleChange = (e) => {
-    if (e.target.value === " ") {
-      setDisable(true);
+    handleDisable();
+  };
+
+  const handleDisable = () => {
+    if (errors.email === true && errors.phone === true) {
+      setDisable(true); //disable
     } else {
       setDisable(false);
     }
@@ -153,6 +157,7 @@ const Registration = () => {
                 type="radio"
                 id="female"
                 name="gender"
+                value="female"
                 onChange={handleChange}
               />
               <label className="ml-2 mr-3" htmlFor="female">
@@ -164,6 +169,7 @@ const Registration = () => {
                 type="radio"
                 id="male"
                 name="gender"
+                value="male"
               />
               <label className="ml-2 mr-3" htmlFor="male">
                 {" "}
@@ -174,6 +180,7 @@ const Registration = () => {
                 type="radio"
                 id="other"
                 name="gender"
+                value="other"
               />
               <label className="ml-2 mr-3" htmlFor="other">
                 {" "}
@@ -199,6 +206,10 @@ const Registration = () => {
                 className={
                   disable ? "btn_disable disabled w-100" : "btn_enable w-100"
                 }
+                onClick={() => {
+                  handleDisable();
+                  setDisable(true);
+                }}
               />
             </div>
           </div>
